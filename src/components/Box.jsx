@@ -1,27 +1,32 @@
 import React from "react";
 
-const Box = () => {
+
+const Box = (props) => {
+
+  let {country} = props;
+  console.log("=======country",country);
+
   return (
     <div className="box">
-      <h1>Country Name</h1>
+      <h1>{country?.name}</h1>
       <div>
         <h4>Capital:</h4>
-        <h6>Aurangabad</h6>
+        <h6>{country?.capital || <>No Capital</>}</h6>
       </div>
 
       <div>
         <h4>Population:</h4>
-        <h6>123456789</h6>
+        <h6>{country?.population}</h6>
       </div>
 
       <div>
         <h4>Area:</h4>
-        <h6>987654</h6>
+        <h6>{country?.area}</h6>
       </div>
 
       <div>
         <h4>Currency:</h4>
-        <h6>AFG DLR</h6>
+        <h6>{country?.currencies?.[0].name || <>No Currency</>}</h6>
       </div>
     </div>
   );
