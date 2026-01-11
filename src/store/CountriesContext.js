@@ -6,6 +6,8 @@ const initialState = {
     countries:[],
     isLoading:false,
     isError:false,
+    sortedAndFilteredCountries:[],
+    filteredTextCountries:[],
 }
 export const CountriesContextProvider = ({ children }) => {
     const [state,dispatch] = useReducer(CountriesReducer,initialState)
@@ -25,7 +27,7 @@ export const CountriesContextProvider = ({ children }) => {
     }, []);
    
   return (
-    <CountriesContext.Provider value={state}>
+    <CountriesContext.Provider value={{state,dispatch}}>
       {children}
     </CountriesContext.Provider>
   );

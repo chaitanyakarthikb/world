@@ -6,14 +6,18 @@ import reportWebVitals from "./reportWebVitals";
 import { CountriesContextProvider } from "./store/CountriesContext.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./components/Error.jsx";
+import Countries from "./components/Countries.jsx";
+import Navbar from "./components/Navbar.jsx";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <CountriesContextProvider>
       <BrowserRouter>
+      <Navbar/>
         <Routes>
           <Route path={"/"} element={<App />} />
           <Route path={"/error"} element={<Error />} />
+          <Route path="/countries" element={<Countries/>}/>
         </Routes>
       </BrowserRouter>
     </CountriesContextProvider>

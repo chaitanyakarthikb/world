@@ -97,3 +97,73 @@
   grid-template-columns: repeat(5, 1fr);
   margin-top: 1rem;
 }
+/* =================================BoxWithFlag */
+
+.boxWithFlag .flag{
+  height: 50%;
+}
+.flag img{
+  width: 100%;
+  height: 100%;
+}
+
+.item--row{
+  display: flex;
+  align-items: center;
+  /* background-color: aqua; */
+  text-align: left;
+  justify-content: space-between;
+  /* background-color: blanchedalmond; */
+  width: 80%;
+  margin: auto;
+}
+
+
+.boxWithFlag{
+  border: solid 2px white;
+  /* width: 85%; */
+  padding: 1rem 1rem 1rem;
+}
+
+.boxWithFlag h1{
+  text-align: center;
+  margin: 1rem 0 1rem;
+}
+
+.boxWithFlag .item--button button{
+  /* background-color: antiquewhite; */
+  width: 30%;
+  margin: 1rem 0rem 1rem;
+  padding: 0.5rem 0 0.5rem;
+  cursor: pointer;
+
+}
+.boxWithFlag .item--button {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.boxes{
+  margin: 2rem 3rem 2rem;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.countriesnav{
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(4,1fr);
+  margin: 1rem 3rem 1rem;
+  position: sticky;
+  top: 5rem;
+  z-index: 10000;
+}
+
+.countriesnav button{
+  padding: 0.25rem 0rem 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}

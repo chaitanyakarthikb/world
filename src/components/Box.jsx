@@ -4,7 +4,6 @@ import React from "react";
 const Box = (props) => {
 
   let {country} = props;
-  console.log("=======country",country);
 
   return (
     <div className="box">
