@@ -7,7 +7,6 @@ import InterestingFacts from './components/InterestingFacts';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
       <HeroSection/>
       <InterestingFacts/>
     </div>
